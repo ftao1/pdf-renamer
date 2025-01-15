@@ -18,6 +18,7 @@ This script (`pdf-renamer.py`) is designed to rename PDF files by adding a date 
 Before using the script, ensure you have the following installed:
 
 - **Python 3.7 or higher**
+- **Git** (optional, for cloning the repository)
 - **Required Python Packages**:
   - `pdfplumber`
   - `dateutil`
@@ -27,13 +28,50 @@ Before using the script, ensure you have the following installed:
 
 ---
 
+## Getting Started
+
+### 1. Clone the Repository (Optional)
+If you want to download the script and its associated files, you can clone the repository using Git. This step is optional but recommended for beginners.
+
+#### On Windows or Linux:
+1. Open a terminal or command prompt.
+2. Run the following command to clone the repository:
+
+   ```bash
+   git clone https://github.com/ftao1/pdf-renamer.git
+   ```
+
+3. Navigate to the cloned directory:
+
+   ```bash
+   cd pdf-renamer
+   ```
+
+#### If You Don't Have Git:
+You can download the repository as a ZIP file:
+1. Go to the repository page on GitHub.
+2. Click the **Code** button, then select **Download ZIP**.
+3. Extract the ZIP file to a directory of your choice.
+
+---
+
 ## Installation
 
 ### 1. Install Python
 Make sure Python is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
 
 ### 2. Install Required Packages
-Install the required Python packages using `pip`. Run the following command in your terminal or command prompt:
+Install the required Python packages using `pip`. You can either install them manually or use the provided `requirements.txt` file.
+
+#### Option 1: Install Using `requirements.txt`
+Run the following command in your terminal or command prompt to install all dependencies at once:
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Option 2: Install Manually
+If you prefer to install the packages manually, run:
 
 ```bash
 pip install pdfplumber python-dateutil
@@ -191,10 +229,21 @@ If you find any issues or have suggestions for improvements, feel free to open a
 
 ## Author
 
-[Your Name]
-[Your Email]
-[Your GitHub Profile]
+ftao1
 
 ---
 
-This updated `README.md` now includes a section explaining how the script handles duplicate filenames on Windows, making it clear that the script is well-suited for organizing files like `statement(1).pdf`, `statement(2).pdf`, etc. Let me know if you need further adjustments!
+### Project Structure
+
+After cloning the repository, your project structure should look like this:
+
+```
+pdf-renamer/
+├── pdf-renamer.py
+├── requirements.txt
+├── README.md
+```
+
+---
+
+This updated `README.md` now includes a **Cloning the Repository** section with beginner-friendly instructions, making it easier for users to get started with the script. Let me know if you need further adjustments!
