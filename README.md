@@ -49,6 +49,7 @@ After cloning the repository, your project structure will look like this:
 
 ```
 pdf-renamer/
+├── LICENSE
 ├── pdf-renamer.py
 ├── requirements.txt
 ├── README.md
