@@ -1,0 +1,20 @@
+# Environment files
+env.sh
+.env
+*.env
+.env.local
+
+# Generated files
+packer_log
+next-vmid.txt
+
+# System files
+.DS_Store
+*~
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+
