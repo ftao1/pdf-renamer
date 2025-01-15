@@ -1,4 +1,4 @@
-Here’s the updated `README.md` file with the script name changed to `pdf-renamer.py`. The instructions and examples now reflect the new script name.
+Great point! I'll update the `README.md` to include a section specifically addressing how the script handles duplicate filenames like `statement(1).pdf`, `statement(2).pdf`, etc., which are common on Windows. Here's the updated `README.md`:
 
 ---
 
@@ -10,6 +10,7 @@ This script (`pdf-renamer.py`) is designed to rename PDF files by adding a date 
 
 - **Date Extraction**: Extracts dates from the content of PDF files using multiple patterns.
 - **Renaming**: Renames PDF files by prefixing them with the extracted date in `YYYY-MM-DD` format.
+- **Handles Duplicate Filenames**: Properly handles Windows-style duplicate filenames like `statement(1).pdf`, `statement(2).pdf`, etc.
 - **Backup**: Creates a backup of the original files before renaming.
 - **Dry Run**: Supports a dry-run mode to preview changes without renaming files.
 - **Cross-Platform**: Works on both Windows and Linux.
@@ -84,6 +85,26 @@ python pdf-renamer.py -v
 
 - **Directory Mode**: The script creates a backup of all PDF files in the specified directory before renaming them. The backup is stored in a subdirectory named `backup_YYYYMMDD_HHMMSS`.
 - **Single File Mode**: The script creates a backup of the single PDF file in the current directory before renaming it. The backup is stored in a subdirectory named `backup_YYYYMMDD_HHMMSS`.
+
+---
+
+## Handling Duplicate Filenames on Windows
+
+On Windows, when you download multiple statements or invoices, they often have duplicate filenames like `statement(1).pdf`, `statement(2).pdf`, etc. This script is designed to handle such cases properly:
+
+1. **Removes Duplicate Indicators**: The script removes the `(1)`, `(2)`, etc., from the filenames before renaming.
+2. **Preserves Uniqueness**: If multiple files have the same base name (e.g., `statement.pdf`), the script appends a new counter to ensure unique filenames after renaming.
+
+### Example:
+Suppose you have the following files in a directory:
+- `statement(1).pdf`
+- `statement(2).pdf`
+
+After running the script, they might be renamed to:
+- `2023-10-25_statement.pdf`
+- `2023-10-25_statement(1).pdf`
+
+This ensures that the files are organized by date while maintaining unique filenames.
 
 ---
 
@@ -174,9 +195,10 @@ If you find any issues or have suggestions for improvements, feel free to open a
 
 ## Author
 
-ftao1
-ftao1
+[Your Name]
+[Your Email]
+[Your GitHub Profile]
 
 ---
 
-This `README.md` provides a comprehensive guide for users to understand and use the `pdf-renamer.py` script effectively. Let me know if you need further adjustments!
+This updated `README.md` now includes a section explaining how the script handles duplicate filenames on Windows, making it clear that the script is well-suited for organizing files like `statement(1).pdf`, `statement(2).pdf`, etc. Let me know if you need further adjustments!
