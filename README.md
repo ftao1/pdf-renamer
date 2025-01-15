@@ -22,9 +22,6 @@ Before using the script, ensure you have the following installed:
 - **Required Python Packages**:
   - `pdfplumber`
   - `dateutil`
-  - `argparse`
-  - `shutil`
-  - `concurrent.futures`
 
 ---
 
@@ -115,6 +112,53 @@ python pdf-renamer.py -v
 
 ---
 
+## Simulated User Experience
+
+### Scenario:
+The user has a directory called `documents` with the following files:
+- `invoice1.pdf` (contains the date `January 15, 2023`)
+- `statement(1).pdf` (contains the date `2023-02-10`)
+- `report.pdf` (contains no date)
+
+The user runs the script for the first time:
+
+```bash
+python pdf-renamer.py /path/to/documents
+```
+
+### Full Output:
+
+```plaintext
+No recent backup found.
+Do you want to back up files first? (Y)es/(N)o [Yes]:
+
+Backup created in: /path/to/documents/backup_20231025_123456
+
+Previewing changes:
+--------------------------------------------------------------------------------
+Original Name                                       -> New Name
+--------------------------------------------------------------------------------
+invoice1.pdf                                        -> 2023-01-15_invoice1.pdf
+statement(1).pdf                                    -> 2023-02-10_statement.pdf
+report.pdf                                          -> [SKIPPED - No date found]
+--------------------------------------------------------------------------------
+
+Proceed with renaming? (Y)es/(N)o [Yes]:
+
+Renamed: invoice1.pdf -> 2023-01-15_invoice1.pdf
+Renamed: statement(1).pdf -> 2023-02-10_statement.pdf
+Skipped: report.pdf (No date found)
+
+Summary:
+- Files processed: 3
+- Successfully renamed: 2
+- Skipped (already formatted): 0
+- Skipped (no date found): 1
+- Errors: 0
+```
+
+---
+
 ## Backup Behavior
 
 - **Directory Mode**: The script creates a backup of all PDF files in the specified directory before renaming them. The backup is stored in a subdirectory named `backup_YYYYMMDD_HHMMSS`.
@@ -139,45 +183,6 @@ After running the script, they might be renamed to:
 - `2023-10-25_statement(1).pdf`
 
 This ensures that the files are organized by date while maintaining unique filenames.
-
----
-
-## Examples
-
-### Example 1: Rename PDFs in a Directory
-Suppose you have a directory `/documents` containing the following files:
-- `invoice1.pdf`
-- `report2.pdf`
-
-Run the script:
-
-```bash
-python pdf-renamer.py /documents
-```
-
-The script will:
-1. Create a backup of the files in `/documents/backup_20231025_123456`.
-2. Rename the files based on the extracted dates, e.g., `2023-10-25_invoice1.pdf`.
-
-### Example 2: Rename a Single PDF File
-Suppose you have a file `sample.pdf` in the current directory. Run the script:
-
-```bash
-python pdf-renamer.py "sample.pdf"
-```
-
-The script will:
-1. Create a backup of `sample.pdf` in `backup_20231025_123456/sample.pdf`.
-2. Rename the file based on the extracted date, e.g., `2023-10-25_sample.pdf`.
-
-### Example 3: Dry Run Mode
-To preview the changes without renaming files, run:
-
-```bash
-python pdf-renamer.py /documents --dry-run
-```
-
-The script will display a preview of the changes without modifying any files.
 
 ---
 
@@ -245,5 +250,3 @@ pdf-renamer/
 ```
 
 ---
-
-This updated `README.md` now includes a **Cloning the Repository** section with beginner-friendly instructions, making it easier for users to get started with the script. Let me know if you need further adjustments!
