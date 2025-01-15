@@ -18,7 +18,7 @@ This script (`pdf-renamer.py`) is designed to rename PDF files by adding a date 
 Before using the script, ensure you have the following installed:
 
 - **Python 3.7 or higher**
-- **Git** (optional, for cloning the repository)
+- **Git** (for cloning the repository)
 - **Required Python Packages**:
   - `pdfplumber`
   - `dateutil`
@@ -27,8 +27,8 @@ Before using the script, ensure you have the following installed:
 
 ## Getting Started
 
-### 1. Clone the Repository (Optional)
-If you want to download the script and its associated files, you can clone the repository using Git. This step is optional but recommended for beginners.
+### 1. Clone the Repository
+To get started, clone the repository using Git. This will download the script and its associated files to your local machine.
 
 #### On Windows or Linux:
 1. Open a terminal or command prompt.
@@ -44,11 +44,15 @@ If you want to download the script and its associated files, you can clone the r
    cd pdf-renamer
    ```
 
-#### If You Don't Have Git:
-You can download the repository as a ZIP file:
-1. Go to the repository page on GitHub.
-2. Click the **Code** button, then select **Download ZIP**.
-3. Extract the ZIP file to a directory of your choice.
+#### Project Structure:
+After cloning the repository, your project structure will look like this:
+
+```
+pdf-renamer/
+├── pdf-renamer.py
+├── requirements.txt
+├── README.md
+```
 
 ---
 
@@ -238,15 +242,3 @@ ftao1
 
 ---
 
-### Project Structure
-
-After cloning the repository, your project structure should look like this:
-
-```
-pdf-renamer/
-├── pdf-renamer.py
-├── requirements.txt
-├── README.md
-```
-
----
