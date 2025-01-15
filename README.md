@@ -1,7 +1,3 @@
-Great point! I'll update the `README.md` to include a section specifically addressing how the script handles duplicate filenames like `statement(1).pdf`, `statement(2).pdf`, etc., which are common on Windows. Here's the updated `README.md`:
-
----
-
 # PDF Renamer Script
 
 This script (`pdf-renamer.py`) is designed to rename PDF files by adding a date prefix extracted from the content of the PDF. It is useful for organizing PDF files chronologically, especially when dealing with invoices, reports, or other documents that contain dates.
