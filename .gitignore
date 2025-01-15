@@ -17,4 +17,62 @@ next-vmid.txt
 # IDE files
 .vscode/
 .idea/
+gnore Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
 
+# Ignore virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+Desktop.ini
+
+# Ignore backup files
+*.bak
+*.tmp
+*.temp
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore coverage reports
+.coverage
+htmlcov/
+
+# Ignore distribution and build files
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore log files
+*.log
+
+# Ignore local configuration files
+local_settings.py
+.env
+.env.local
+.env.*.local
+
+# Ignore mypy cache
+.mypy_cache/]
