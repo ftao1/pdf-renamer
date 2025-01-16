@@ -6,6 +6,7 @@ This script (`pdf-renamer.py`) is designed to rename PDF files by adding a date 
 
 - **Date Extraction**: Extracts dates from the content of PDF files using multiple patterns.
 - **Renaming**: Renames PDF files by prefixing them with the extracted date in `YYYY-MM-DD` format.
+- **Replacement**: Replaces (` `) in the filename with (`_`) to improve compatibility between Windows and Linux systems.
 - **Handles Duplicate Filenames**: Properly handles Windows-style duplicate filenames like `statement(1).pdf`, `statement(2).pdf`, etc.
 - **Backup**: Creates a backup of the original files before renaming.
 - **Dry Run**: Supports a dry-run mode to preview changes without renaming files.
