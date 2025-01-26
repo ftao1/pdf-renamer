@@ -76,3 +76,6 @@ local_settings.py
 
 # Ignore mypy cache
 .mypy_cache/]
+
+# arch
+arch
