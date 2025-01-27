@@ -143,18 +143,18 @@ Backup created in: /path/to/documents/backup_20231025_123456
 
 Previewing changes:
 --------------------------------------------------------------------------------
-Original Name                                       -> New Name
+Original Name                                     -> New Name                                    
 --------------------------------------------------------------------------------
-invoice1.pdf                                        -> 2023-01-15_invoice1.pdf
-statement(1).pdf                                    -> 2023-02-10_statement.pdf
-report.pdf                                          -> [SKIPPED - No date found]
+invoice1.pdf                                     -> 2023-01-15_invoice1.pdf                    
+statement(1).pdf                                 -> 2023-02-10_statement.pdf                   
+report.pdf                                       -> [SKIPPED - No date found]                  
 --------------------------------------------------------------------------------
 
 Proceed with renaming? (Y)es/(N)o [Yes]:
 
-Renamed: invoice1.pdf -> 2023-01-15_invoice1.pdf
-Renamed: statement(1).pdf -> 2023-02-10_statement.pdf
-Skipped: report.pdf (No date found)
+Renamed: invoice1.pdf                            -> 2023-01-15_invoice1.pdf
+Renamed: statement(1).pdf                        -> 2023-02-10_statement.pdf
+Skipped: report.pdf                              -> [No date found]
 
 Summary:
 - Files processed: 3
@@ -244,4 +244,3 @@ If you find any issues or have suggestions for improvements, feel free to open a
 ftao1
 
 ---
-
