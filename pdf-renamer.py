@@ -400,7 +400,7 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(
         description="Rename PDF files by adding a date prefix extracted from their contents.",
-        usage="pdf_renamer.py [-h] [--dry-run] <file or directory>"
+        usage="pdf-renamer.py [-h] [--dry-run] <file or directory>"
     )
     parser.add_argument(
         "path",
@@ -415,7 +415,7 @@ def main() -> None:
     parser.add_argument(
         "-v", "--version",
         action="version",
-        version=f"pdf_renamer v{VERSION}",
+        version=f"pdf-renamer v{VERSION}",
         help="Show program's version number and exit"
     )
     args = parser.parse_args()

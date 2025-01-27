@@ -1,6 +1,6 @@
 # PDF Renamer Script
 
-This script (`pdf-renamer.py`) is designed to rename PDF files by adding a date prefix extracted from the content of the PDF. It is useful for organizing PDF files chronologically, especially when dealing with invoices, reports, or other documents that contain dates.
+This script (`pdf_renamer.py`) is designed to rename PDF files by adding a date prefix extracted from the content of the PDF. It is useful for organizing PDF files chronologically, especially when dealing with invoices, reports, or other documents that contain dates.
 
 ## Features
 
@@ -10,6 +10,7 @@ This script (`pdf-renamer.py`) is designed to rename PDF files by adding a date 
 - **Handles Duplicate Filenames**: Properly handles Windows-style duplicate filenames like `statement(1).pdf`, `statement(2).pdf`, etc.
 - **Backup**: Creates a backup of the original files before renaming.
 - **Dry Run**: Supports a dry-run mode to preview changes without renaming files.
+- **Multi-threaded**: Processes multiple files in parallel for improved performance.
 - **Cross-Platform**: Works on both Windows and Linux.
 
 ---
